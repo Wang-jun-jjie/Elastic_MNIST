@@ -26,7 +26,7 @@ parser.add_argument('--image_size',       default=28,          type=int,   help=
 parser.add_argument('--alpha', '-a',      default=15,          type=int,   help='alpha for elastic transform')
 parser.add_argument('--kernel_size', '-k', default=13,      type=int,   help='kernel size for elastic transform, must be odd number')
 parser.add_argument('--data_directory',   default='./mnist_png',type=str, help='dataset inputs root directory')
-parser.add_argument('--output_directory', default='./mnist_distort',type=str, help='dataset outputs root directory')
+parser.add_argument('--output_directory', default='./mnist_dis',type=str, help='dataset outputs root directory')
 
 args = parser.parse_args()
 
