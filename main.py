@@ -23,8 +23,8 @@ parser.add_argument('--resume', '-r',     action='store_true', help='resume from
 parser.add_argument('--seed',             default=35328880,    type=int,   help='random seed')
 parser.add_argument('--batch_size', '-b', default=8,       type=int,   help='mini-batch size (default: 8)')
 parser.add_argument('--image_size',       default=28,          type=int,   help='input image size (default: 28 for MNIST)')
-parser.add_argument('--alpha', '-a',      default=10,          type=int,   help='alpha for elastic transform')
-parser.add_argument('--kernel_size', '-k', default=9,      type=int,   help='kernel size for elastic transform, must be odd number')
+parser.add_argument('--alpha', '-a',      default=15,          type=int,   help='alpha for elastic transform')
+parser.add_argument('--kernel_size', '-k', default=13,      type=int,   help='kernel size for elastic transform, must be odd number')
 parser.add_argument('--data_directory',   default='./mnist_png',type=str, help='dataset inputs root directory')
 parser.add_argument('--output_directory', default='./mnist_distort',type=str, help='dataset outputs root directory')
 
