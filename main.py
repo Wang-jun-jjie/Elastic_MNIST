@@ -24,6 +24,7 @@ parser.add_argument('--batch_size', '-b', default=8,       type=int,   help='min
 parser.add_argument('--image_size',       default=28,          type=int,   help='input image size (default: 28 for MNIST)')
 parser.add_argument('--alpha', '-a',      default=9,          type=int,   help='alpha for elastic transform')
 parser.add_argument('--kernel_size', '-k', default=11,      type=int,   help='kernel size for elastic transform, must be odd number')
+parser.add_argument('--rotation', '-r',   default=90,      type=int,   help='degree to rotate the image randomly')
 parser.add_argument('--data_directory',   default='./mnist_png',type=str, help='dataset inputs root directory')
 parser.add_argument('--output_directory', default='./mnist_dis',type=str, help='dataset outputs root directory')
 
@@ -108,7 +109,7 @@ def main():
     ])
     post_transform = transforms.Compose([
         transforms.RandomAffine(
-            degrees=60, # degree
+            degrees=args.rotation, # degree
             translate=(0.1, 0.1),
             scale=(0.75, 1.25),
         ),
